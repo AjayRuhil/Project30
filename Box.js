@@ -16,10 +16,17 @@ class Block{
   }
 
   display(){
+    if(this.body.position.y<480){
+      
     var pos = this.body.position;
 
     rectMode(CENTER);
     rect(pos.x,pos.y,this.width,this.height);
+    }else{
+      World.remove(world,this.body)
+    }
+    console.log(this.body.speed)
+    
   }
 
 };
